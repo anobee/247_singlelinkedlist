@@ -106,4 +106,17 @@ void serchdata() {
         system (" cls ");
         return;
     } 
+    else {
+        int nim;
+        cout << "masukan NIM : ";
+        cin >> nim;
+        Node*currentNode = START;
+        while (currentNode != NULL) {
+            if (currentNode ->noMhs == nim) {
+                cout << "NIM :" << currentNode -> noMhs << "Nama :" << currentNode ->name << end;
+                return;
+            }
+            currentNode = currentNode ->next
+        }
+    }
 }
