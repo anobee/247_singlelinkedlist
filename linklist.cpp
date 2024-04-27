@@ -138,8 +138,15 @@ int main() {
             {
                 case 1:
                     addNode ();
-                    cout <<
+                    cout << "data berhasil ditambahkan"<< endl;
+                    system ("pause");
+                    system ("cls");
+                    break;
+
+                case 2:
+                    if (listempty())
             }
+            
         }
     }
 }
