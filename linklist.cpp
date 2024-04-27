@@ -8,20 +8,20 @@ struct Node {
 
 };
 
-node*start = NULL;
+Node * start = NULL;
 
 void addNode() {
     int nim;
     string nama;
     Node* nodebaru = new Node() ;
     cout << "masukan NIM = ";
-    cin >> nim
+    cin >> nim;
     cout << "masukan Nama = ";
     cin >> nama;
     nodebaru-> noMhs = nim;
     nodebaru-> name = nama;
  
-    if (START==NULL || nim <== START -> noMhs) {
+    if (START == NULL || nim <= START -> noMhs) {
         if (START != NULL && nim == START->noMhs)
         {
             cout << "NIM sudah ada" << endl;
@@ -31,8 +31,18 @@ void addNode() {
         START = nodebaru ;
         return;
     }
-    node*previous = START;
-    node*current = START;
+    Node * previous = START;
+    Node * current = START;
 
-    while ((current != NUll)&&(nim>=current->noMhs))
+    while ((current != NULL )&&(nim>=current->noMhs))
+    {
+        if (nim == current -> noMhs)
+        {
+        cout << "NIM sudah ada" << endl;
+        return;
+        }
+        previous = current;
+        current = current->next;
+    }
+
 }
