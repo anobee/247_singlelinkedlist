@@ -27,7 +27,7 @@ void addNode() {
             cout << "NIM sudah ada" << endl;
             return ;
         }
-        nodebaru ->next =start;
+        nodebaru ->next = START;
         START = nodebaru ;
         return;
     }
@@ -83,7 +83,7 @@ bool listempty() {
         return false;
 }
 
-void transverse() {
+void traverse() {
     if  (listempty()) {
         cout << "list kosong " << endl;
         system ("pause");
@@ -113,7 +113,7 @@ void serchdata() {
         Node*currentNode = START;
         while (currentNode != NULL) {
             if (currentNode ->noMhs == nim) {
-                cout << "NIM :" << currentNode -> noMhs << "Nama :" << currentNode ->name << end;
+                cout << "NIM :" << currentNode -> noMhs << "Nama :" << currentNode ->name << endl;
                 return;
             }
             currentNode = currentNode ->next;
@@ -165,7 +165,7 @@ int main() {
                             break ;
 
                     case 3:
-                        traverse () ;
+                        traverse() ;
                         break;
 
                     case 4 :
