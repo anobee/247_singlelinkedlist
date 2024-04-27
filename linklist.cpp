@@ -8,7 +8,7 @@ struct Node {
 
 };
 
-Node* start = NULL;
+Node* START = NULL;
 
 void addNode() {
     int nim;
@@ -67,11 +67,34 @@ bool searchNode (int nim, Node*current, Node*previous) {
 
 bool deleteNode (int nim) {
     Node*current = START;
-    node*previous = START;
+    Node*previous = START;
     if (searchNode(nim,previous,current)==false)
      return false;
      previous ->next = current -> next;
     if  (current == START)
      START = current ->next ;
      return true;
+}
+
+bool listempty() {
+    if (START == NULL)
+        return true;
+    else
+        return false;
+}
+
+void transverse() {
+    if  (listempty()) {
+        cout << "list kosong " << endl;
+        system ("pause");
+        system ("cls");
+        return ;
+    }
+    else {
+        Node* currentNode = START;
+        while(currentNode != NULL){
+            cout << "NIM" << currentNode->noMhs << ",nama: " << currentNode -> name <<endl ;
+            currentNode = currentNode -> next 
+        }
+    }
 }
