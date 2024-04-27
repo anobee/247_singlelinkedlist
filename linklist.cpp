@@ -145,8 +145,40 @@ int main() {
 
                 case 2:
                     if (listempty())
-            }
-            
+                    {
+                        cout << "list kosong" << endl;
+                        system ("pause");
+                        system("cls");
+                        break ;
+                    }
+
+                    int nim;
+                    cout << "masukan NIM :";
+                    cin >> nim;
+                    if (deleteNode(nim)){
+                        cout << "nim " << nim << "berhasil dihapus" << endl;
+                        system ("pause");
+                        system("cls");
+                    }
+                    else 
+                            cout << "data tidak ditemukan" << endl ;
+                            break ;
+
+                    case 3:
+                        traverse () ;
+                        break;
+
+                    case 4 :
+                        break;
+
+                    default :
+                        cout << "pilihan tidak ada" << endl ;
+                        break ;
+            }      
         }
-    }
+        catch (exception e)
+        {
+            cout << "terjadi kesalahan" << endl;
+        }
+    } while (pilihan !=5);
 }
