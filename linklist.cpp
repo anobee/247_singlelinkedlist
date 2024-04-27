@@ -6,4 +6,4 @@ struct node {
     string name;
     node* next;
 
-}
+};
