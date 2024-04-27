@@ -1,11 +1,16 @@
 #include <iostream>
 using namespace std;
 
-struct node {
+struct Node {
     int noMhs;
     string name;
-    node* next;
+    Node* next;
 
 };
 
-node*start
+node*start = NULL;
+
+void addNode() {
+    int nim;
+    
+}
