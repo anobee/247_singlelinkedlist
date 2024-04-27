@@ -94,7 +94,16 @@ void transverse() {
         Node* currentNode = START;
         while(currentNode != NULL){
             cout << "NIM" << currentNode->noMhs << ",nama: " << currentNode -> name <<endl ;
-            currentNode = currentNode -> next 
+            currentNode = currentNode -> next; 
         }
     }
+}
+
+void serchdata() {
+    if (listempty()){
+        cout << "list kosong" << endl;
+        system ("pause");
+        system (" cls ");
+        return;
+    } 
 }
